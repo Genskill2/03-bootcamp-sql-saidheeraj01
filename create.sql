@@ -1,7 +1,7 @@
 create table publisher(
       id integer primary key,
       name text,
-      country text,
+      country text
 );
 
 
@@ -10,19 +10,19 @@ create table books(
       title text,
       publisher integer,
       foreign key (publisher)
-      references publisher(id),
+      references publisher(id)
 );
 
 create table subjects(
       id integer primary key,
-      name text,
+      name text
 );
 
 create table books_subjects(
       book integer,
       subject integer,
-      foreign key(book)
+      foreign key (book)
       references books(id),
       foreign key (subject)
-      references subjects(id),
+      references subjects(id)
 );
